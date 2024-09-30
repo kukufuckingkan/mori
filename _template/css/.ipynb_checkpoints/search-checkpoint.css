@@ -1,0 +1,35 @@
+.sidebar-search {
+    margin: 15px 10px;
+}
+
+.sidebar-search input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.sidebar-search button {
+    padding: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar-search-results {
+    max-height: 300px;
+    overflow-y: scroll;
+    margin-top: 10px;
+}
+
+.sidebar-search-results table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sidebar-search-results th, .sidebar-search-results td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}

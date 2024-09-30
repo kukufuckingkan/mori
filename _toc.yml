@@ -4,6 +4,12 @@
 format: jb-book
 root: intro
 parts:
+  - caption: Search
+    numbered: False
+    chapters:
+    - file: search/ߦߌߣߌߣߊ.ipynb
+    - file: search/english.ipynb    
+    
   - caption: English
     numbered: True
     chapters:

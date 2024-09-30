@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'english/1_homage';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="../intro.html" />
+    <link rel="prev" title="Search" href="../search/english.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,7 +178,12 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">English</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Search</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../search/%DF%A6%DF%8C%DF%A3%DF%8C%DF%A3%DF%8A.html">ߦߌߣߌߣߊ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../search/english.html">Search</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">English</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Homage</a></li>
 </ul>
@@ -380,67 +385,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="homage">
 <h1><span class="section-number">1. </span>Homage<a class="headerlink" href="#homage" title="Link to this heading">#</a></h1>
-<!-- _templates/custom_search_box.html -->
-<div>
-    <input type="text" id="search-box" placeholder="Type your query here..." />
-    <button id="search-button">Search</button>
-    <div id="results"></div>
-</div>
-<script>
-    document.getElementById('search-button').onclick = function () {
-        const query = document.getElementById('search-box').value;
-
-        fetch(`http://0.0.0.0:8080/word`)
-            .then(response => response.json())
-            .then(data => {
-                // Get the results div and clear it for fresh results
-                const resultsDiv = document.getElementById('results');
-                resultsDiv.innerHTML = '';
-
-                // Check if data is not null or empty
-                if (data && data.length > 0) {
-                    // Create a table to display the results
-                    const table = document.createElement('table');
-                    table.style.width = '100%';
-                    table.border = '1';
-
-                    // Create a header row
-                    const headerRow = document.createElement('tr');
-                    const headers = ['Index', 'ID', 'Text', 'Meaning', 'Voice', 'Root ID', 'Type', 'Version', 'Examples'];
-                    headers.forEach(header => {
-                        const th = document.createElement('th');
-                        th.innerText = header;
-                        th.style.padding = '8px';
-                        th.style.backgroundColor = '#f2f2f2';
-                        headerRow.appendChild(th);
-                    });
-                    table.appendChild(headerRow);
-
-                    // Loop through each element in the data array and create a row
-                    data.forEach(element => {
-                        const row = document.createElement('tr');
-                        const properties = ['index', 'id', 'text', 'meaning', 'voice', 'root_id', 'type', 'version', 'examples'];
-                        properties.forEach(prop => {
-                            const cell = document.createElement('td');
-                            cell.innerText = element[prop] !== null ? element[prop] : 'null';
-                            cell.style.padding = '8px';
-                            row.appendChild(cell);
-                        });
-                        table.appendChild(row);
-                    });
-
-                    // Append the table to the results div
-                    resultsDiv.appendChild(table);
-                } else {
-                    // Show a no-results message if the data is empty or null
-                    const noResultsMessage = document.createElement('p');
-                    noResultsMessage.innerText = 'No results found. Please try a different search.';
-                    resultsDiv.appendChild(noResultsMessage);
-                }
-            })
-            .catch(error => console.error('Error fetching data:', error));
-    };
-</script></section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -473,12 +418,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../intro.html"
+       href="../search/english.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        <p class="prev-next-title">Search</p>
       </div>
     </a>
 </div>
